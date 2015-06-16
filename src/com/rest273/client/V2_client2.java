@@ -6,12 +6,11 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
-public class V2_client {
-
+public class V2_client2 {
 	public static void main(String[] args) {
-		ClientObject client1 = new ClientObject("client1", 0);
+		ClientObject client2 = new ClientObject("client2", 0);
 
-		clientRest(client1);
+		clientRest(client2);
 
 	}
 
@@ -69,4 +68,5 @@ public class V2_client {
 		}
 
 	}
+
 }

@@ -16,7 +16,7 @@ import org.codehaus.jettison.json.JSONObject;
 @Path("/V1/server/")
 public class V1_server {
 
-	JSONArray jsonarray = new JSONArray();
+	static JSONArray jsonarray = new JSONArray();
 
 	@GET
 	@Path("/get")
@@ -57,6 +57,7 @@ public class V1_server {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return Response.status(201).entity(respondObj).build();
+		String returnString = jsonarray.toString();
+		return Response.status(201).entity(returnString).build();
 	}
 }
