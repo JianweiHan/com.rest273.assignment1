@@ -5,34 +5,35 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
 public class V1_client {
-	
+
 	public static void main(String[] args) {
 		try {
-	 
+
 			Client client = Client.create();
-	 
+
 			WebResource webResource = client
-			   .resource("http://localhost:7001/com.rest273.assignment1/rest/V1/server/get");
-	 
+					.resource("http://localhost:7001/com.rest273.assignment1/rest/V1/server/get");
+
 			ClientResponse response = webResource.accept("application/json")
-	                   .get(ClientResponse.class);
-	 
+					.get(ClientResponse.class);
+
 			if (response.getStatus() != 200) {
-			   throw new RuntimeException("Failed : HTTP error code : "
-				+ response.getStatus());
+				throw new RuntimeException("Failed : HTTP error code : "
+						+ response.getStatus());
 			}
-	 
+
 			String output = response.getEntity(String.class);
-	 
+
 			System.out.println("Output from Server .... \n");
 			System.out.println(output);
-	 
-		  } catch (Exception e) {
-	 
+
+		} catch (Exception e) {
+
 			e.printStackTrace();
-	 
-		  }
-	 
+
 		}
+
+	}
+
 
 }
