@@ -9,9 +9,9 @@ import com.sun.jersey.api.client.WebResource;
 public class V2_client {
 
 	public static void main(String[] args) {
-		ClientObject client1 = new ClientObject("client1", 0);
+		ClientObject client = new ClientObject("client3", 0);
 
-		clientRest(client1);
+		clientRest(client);
 
 	}
 
@@ -40,7 +40,6 @@ public class V2_client {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-
 				ClientResponse response = webResource.type("application/json")
 						.post(ClientResponse.class, obj);
 
