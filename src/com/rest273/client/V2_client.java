@@ -9,7 +9,7 @@ import com.sun.jersey.api.client.WebResource;
 public class V2_client {
 
 	public static void main(String[] args) {
-		ClientObject client = new ClientObject("client3", 0);
+		ClientObject client = new ClientObject("client1", 0);
 
 		clientRest(client);
 
